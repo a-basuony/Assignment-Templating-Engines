@@ -7,12 +7,12 @@
   <body>
     <%- include('./includes/navigation.ejs') %>
     <main>
-      <p>Users:</p>
+      <u><p>Users:</p></u>
       <% if(users && users.length > 0) { %> <% for(let user of users) { %>
       <div class="user-info">
         <ul>
-          <li>Name: <%= user.name %></li>
-          <li>Email: <%= user.email %></li>
+          <li><u>Name:</u> <%= user.name %></li>
+          <li><u>Email:</u> <%= user.email %></li>
         </ul>
       </div>
       <% } %> <% } else { %>
