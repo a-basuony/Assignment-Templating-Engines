@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./includes/meta.ejs') %>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <%- include('./includes/navigation.ejs') %>
+    <main>
+      <p>Users:</p>
+      <% if(users && users.length > 0) { %> <% for(let user of users) { %>
+      <div class="user-info">
+        <ul>
+          <li>Name: <%= user.name %></li>
+          <li>Email: <%= user.email %></li>
+        </ul>
+      </div>
+      <% } %> <% } else { %>
+      <h1>No Users Found</h1>
+      <% } %>
+    </main>
+  </body>
+</html>
